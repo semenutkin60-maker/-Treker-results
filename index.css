@@ -1,0 +1,311 @@
+/* ========= ОБЩИЕ СТИЛИ ========= */
+body {
+    background-color: #0A0C10;
+    color: #E0E0E0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ========= HEADER ========= */
+.header {
+    background: #161B22;
+    padding: 1rem 2rem;
+    border-bottom: 2px solid #00FF88;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.header__logo {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #00FF88, #00AA55);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: #0A0C10;
+    box-shadow: 0 0 8px #00FF88;
+}
+
+.header__title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, #00FF88, #FF4444);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 5px rgba(0, 255, 136, 0.3);
+}
+
+/* ========= CONTAINER ========= */
+.container {
+    display: flex;
+    flex: 1;
+    margin: 2rem;
+    gap: 2rem;
+}
+
+/* ========= SIDEBAR ========= */
+.sidebar {
+    width: 260px;
+    background: #0F1218;
+    border-radius: 20px;
+    padding: 1.5rem;
+    border-left: 4px solid #FF4444;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.sidebar__title {
+    color: #FF4444;
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    border-bottom: 1px solid #2A2F3A;
+    padding-bottom: 0.5rem;
+}
+
+.sidebar__nav {
+    list-style: none;
+}
+
+.sidebar__item {
+    margin: 1rem 0;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.sidebar__item:hover {
+    background: #1E2432;
+    transform: translateX(5px);
+}
+
+.sidebar__item--active {
+    background: #1E2A1E;
+    border-left: 3px solid #00FF88;
+    color: #00FF88;
+}
+
+/* ========= MAIN CONTENT ========= */
+.main-content {
+    flex: 1;
+    background: #0D1117;
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    border: 1px solid #21262D;
+}
+
+.main-content__card {
+    background: #161B22;
+    border-radius: 16px;
+    padding: 1.2rem;
+    margin-bottom: 1.2rem;
+    border-left: 4px solid #00FF88;
+    transition: transform 0.2s;
+}
+
+.main-content__card:hover {
+    transform: translateY(-3px);
+}
+
+.main-content__card-title {
+    color: #00FF88;
+    margin-bottom: 0.5rem;
+}
+
+.main-content__card-badge {
+    display: inline-block;
+    background: #00AA55;
+    color: white;
+    font-size: 0.7rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 20px;
+    margin-left: 0.5rem;
+}
+
+.main-content__card-badge--critical {
+    background: #FF4444;
+}
+
+.main-content__progress {
+    width: 100%;
+    height: 8px;
+    border-radius: 10px;
+    margin-top: 0.5rem;
+}
+
+.main-content__progress::-webkit-progress-bar {
+    background-color: #2A2F3A;
+    border-radius: 10px;
+}
+
+.main-content__progress::-webkit-progress-value {
+    background-color: #00FF88;
+    border-radius: 10px;
+}
+
+.main-content__stats-row {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.main-content__stat-up {
+    color: #00FF88;
+}
+
+.main-content__stat-down {
+    color: #FF4444;
+}
+
+/* ========= HERO (ГЛАВНЫЙ БЛОК) ========= */
+.hero {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.hero__content {
+    max-width: 900px;
+    text-align: center;
+    background: rgba(22, 27, 34, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 40px;
+    padding: 3rem 2rem;
+    border: 1px solid rgba(0, 255, 136, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 255, 136, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hero__content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.5), 0 0 40px rgba(0, 255, 136, 0.2);
+}
+
+.hero__icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.7; }
+    50% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.7; }
+}
+
+.hero__title {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+    color: #E0E0E0;
+}
+
+.hero__title-accent {
+    background: linear-gradient(90deg, #00FF88, #00AA55);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 700;
+}
+
+.hero__subtitle {
+    font-size: 1.2rem;
+    color: #7D8590;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.hero__divider {
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #00FF88, #FF4444);
+    margin: 0 auto 2rem auto;
+    border-radius: 3px;
+}
+
+.hero__stats {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.hero__stat {
+    text-align: center;
+}
+
+.hero__stat-value {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #00FF88;
+}
+
+.hero__stat-label {
+    font-size: 0.8rem;
+    color: #7D8590;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero__btn {
+    background: linear-gradient(135deg, #00FF88, #00AA55);
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #0A0C10;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-family: inherit;
+}
+
+.hero__btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #00FF88;
+}
+
+/* ========= FOOTER ========= */
+.footer {
+    background: #0A0C10;
+    text-align: center;
+    padding: 1.5rem;
+    border-top: 1px solid #2A2F3A;
+    font-family: monospace;
+    font-size: 0.85rem;
+    color: #7D8590;
+}
+
+.footer__version {
+    color: #00FF88;
+    font-weight: bold;
+}
+
+/* ========= АДАПТИВ ========= */
+@media (max-width: 700px) {
+    .container {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+    }
+    .header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+}
